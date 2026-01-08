@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.8.3.2 (Linux)"/>
+	<meta name="created" content="2026-01-08T15:53:29.812558794"/>
+	<meta name="changed" content="2026-01-08T15:54:42.416433969"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+	</style>
+</head>
+<body lang="pt-BR" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+&lt;!DOCTYPE html&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;html
+lang=&quot;pt-br&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+charset=&quot;UTF-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;title&gt;C
+na Web com WebAssembly&lt;/title&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        body {
+font-family: sans-serif; text-align: center; padding: 50px; }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        input {
+padding: 10px; font-size: 16px; }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        button {
+padding: 10px 20px; font-size: 16px; cursor: pointer; background:
+#007bff; color: white; border: none; }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        #resultado {
+margin-top: 20px; font-weight: bold; font-size: 24px; color: #333; }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;h1&gt;🚀 C
++ WebAssembly&lt;/h1&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;p&gt;Digite
+um número para calcular o fatorial usando C:&lt;/p&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;input
+type=&quot;number&quot; id=&quot;numeroInput&quot; placeholder=&quot;Ex:
+5&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;button
+onclick=&quot;calcular()&quot;&gt;Calcular&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div
+id=&quot;resultado&quot;&gt;&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script
+src=&quot;math.js&quot;&gt;&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        function
+calcular() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+num = document.getElementById('numeroInput').value;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            // Aqui
+acontece a mágica!</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            //
+Module.ccall chama a função C diretamente.</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            //
+Parâmetros: 'nome_funcao', 'tipo_retorno', ['tipos_argumentos'],
+[valores]</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            const
+resposta = Module.ccall(</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'calcular_fatorial', // Nome da função no C</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+'number',            // Tipo de retorno</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+['number'],          // Tipos dos argumentos</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+[num]                // Argumentos passados</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            );</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+document.getElementById('resultado').innerText = `Fatorial:
+${resposta}`;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/html&gt;</p>
+</body>
+</html>
